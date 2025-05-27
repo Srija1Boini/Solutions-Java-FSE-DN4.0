@@ -1,0 +1,495 @@
+1.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Inclusion Methods</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Body styles */
+        body {
+            background-color: lightyellow;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Inline CSS -->
+    <h1 style="color: red;">
+
+    <!-- This heading uses external CSS -->
+    <h2>This heading uses external styles</h2>
+
+    <p>This paragraph also uses external CSS.</p>
+
+</body>
+</html>
+
+
+External SheetStyle
+
+
+/* Header styles */
+h2 {
+    color: darkblue;
+    text-align: center;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+2.
+
+/* ============================= */
+/* General Body Styles          */
+/* ============================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ============================= */
+/* Header Section Styles        */
+/* ============================= */
+header {
+    background-color: #004080;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Style for the main site heading */
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* ============================= */
+/* Main Call-To-Action Button   */
+/* ============================= */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for CTA button */
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* ============================= */
+/* Footer Styles                */
+/* ============================= */
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+3.
+
+/* Universal selector to reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Element selector to style all <h2> elements */
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* ID selector for the banner */
+#mainHeader {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Class selector for event containers */
+.eventCard {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Grouping selector for h3 and p elements */
+h3, p {
+  font-family: Arial, sans-serif;
+  color: #555;
+  margin: 8px 0;
+}
+
+4.
+
+body {
+  color: #2c3e50; /* Dark slate text using HEX */
+  background-color: rgba(240, 248, 255, 0.8); /* Alice blue fallback with RGBA */
+  background-image: url('cityscape.jpg'); /* Replace with actual image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Apply gradient to section headers */
+section h2 {
+  background: linear-gradient(to right, #1e90ff, #00bfff); /* DodgerBlue to DeepSkyBlue */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+5.
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+.description {
+  text-align: justify;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+6.
+
+a:link {
+  color: #1a73e8;       /* Default link color */
+  text-decoration: none;
+}
+
+a:visited {
+  color: #5a3e85;       /* Color for visited links */
+}
+
+a:hover {
+  color: #0b59d1;       /* On hover */
+  text-decoration: underline;
+}
+
+a:active {
+  color: #d10000;       /* When clicked */
+}
+ul, ol {
+  list-style-type: square;      /* Could be disc, circle, decimal, etc. */
+  list-style-position: inside;  /* Options: inside | outside */
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  padding: 5px 0;
+  margin: 5px 0;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  padding: 10px;
+  margin: 5px 0;
+}
+
+7.
+
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.event-table th,
+.event-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.event-table tr:nth-child(even) {
+  background-color: #e6f7ff;
+}
+
+8.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Model & Layout Control</title>
+  <style>
+    .eventCard {
+      border: 2px solid #333;
+      padding: 16px;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #007BFF;
+      outline-offset: 2px;
+    }
+
+    .hiddenDiv {
+      visibility: hidden;
+      background-color: lightcoral;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .noneDiv {
+      display: none;
+      background-color: lightgreen;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="eventCard">
+    <h2>Event Title</h2>
+    <p>This is an event description inside a styled card using the box model.</p>
+  </div>
+
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email"><br><br>
+
+    <textarea placeholder="Your message"></textarea>
+  </form>
+
+  <h3>Visibility Comparison</h3>
+  <div class="hiddenDiv">This uses <code>visibility: hidden</code></div>
+  <div class="noneDiv">This uses <code>display: none</code></div>
+
+</body>
+</html>
+
+9.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Multi-Column News Article</title>
+  <style>
+    .newsArticle {
+      column-count: 2;          /* Number of columns */
+      column-gap: 30px;         /* Space between columns */
+      column-rule: 1px solid gray;  /* Vertical rule between columns */
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #fafafa;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="newsArticle">
+    <h2>Community Bulletin</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed purus eu urna feugiat fringilla. Sed ac volutpat lectus. Proin lobortis purus eget erat dictum, a dignissim urna cursus. Donec vulputate eros eu sem lobortis, et commodo magna suscipit.
+    </p>
+    <p>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Nulla facilisi. Nullam scelerisque augue at lectus gravida, id pulvinar purus dignissim.
+    </p>
+    <p>
+      Fusce a magna nec eros mattis tempor. Phasellus convallis dolor in efficitur fermentum. Vivamus rutrum quam sed nisl rhoncus, a luctus nunc lacinia.
+    </p>
+  </section>
+
+</body>
+</html>
+
+10.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive Web Design</title>
+  <style>
+    /* Base styles */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1.2rem; /* base font size */
+      margin: 0;
+      padding: 0 5vw; /* horizontal padding in vw */
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1rem 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .content img {
+      width: 50vw; /* flexible width */
+      max-width: 400px;
+      height: auto;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 8px;
+    }
+
+    /* Media query for smaller than 768px */
+    @media (max-width: 767px) {
+      body {
+        font-size: 1rem;
+        padding: 0 3vw;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      .content img {
+        width: 80vw; /* smaller width on small screens */
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h1>Welcome to Our Portal</h1>
+    <p>This portal is designed to work beautifully on phones, tablets, and desktops.</p>
+    <img src="https://via.placeholder.com/800x400" alt="Responsive Design Example" />
+  </section>
+
+</body>
+</html>
+
+11.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Debug and Test Example</title>
+  <style>
+    .container {
+      width: 600px;         /* Fixed width causes issues on small screens */
+      margin: 0 auto;
+      background-color: #eee;
+      padding: 20px;
+    }
+
+    .item {
+      float: left;
+      width: 200px;         /* Fixed width */
+      height: 100px;
+      background-color: teal;
+      margin: 10px;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Debug and Test with DevTools</h1>
+  <p>Resize the viewport below 600px width and see how the layout breaks.</p>
+
+  <div class="container">
+    <div class="item">Box 1</div>
+    <div class="item">Box 2</div>
+    <div class="item">Box 3</div>
+  </div>
+
+</body>
+</html>
