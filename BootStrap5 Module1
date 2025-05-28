@@ -1,0 +1,804 @@
+1.
+EX-1.1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 5 CDN Example</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-primary">Hello, Bootstrap 5 via CDN!</h1>
+    <p>This is a simple Bootstrap layout.</p>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle CDN (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+=>USING npm
+EX-1.2
+
+npm init -y
+npm install bootstrap
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap via npm</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-success">Bootstrap 5 from npm</h1>
+    <p>This page uses Bootstrap installed via npm.</p>
+  </div>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+2.
+EX-2.1
+
+a)CSS Folder
+-Contains compiled CSS Styles for Bootstrap.
+-Has important Key Files like  bootstrap.css,bootstrap.min.css and bootstrap.rtl.min.css
+-Each key file has it's significance for styling bootstrap.
+
+b)JS Folder
+-Contains JavaScript for interactive components like modals,tooltips and carousels etc..
+-Has Key Files like bootstrap.bundle.min.js and bootstrap.min.js .
+
+c)Icons Folder 
+-Contains Bootstrap Icons (a seperate library of SVG-based icons).
+-Has Key Files like bootstrap-icons.css and fonts/ .
+
+EX-2.2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Example</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Your content goes here -->
+
+  <!-- Bootstrap Bundle JS (with Popper) -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+3.
+EX- 3.1 & 3.2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Grid Layout</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .box {
+      background-color: #4CAF50;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      border: 1px solid #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="box">Column 1</div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="box">Column 2</div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="box">Column 3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (Optional, for interactive components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+4.
+EX-4.1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two-Column Layout</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .sidebar {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .content {
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-3 sidebar">
+        Sidebar
+      </div>
+      <div class="col-md-9 content">
+        Content Area
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+EX-4.2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Four-Column Layout</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .box {
+      background-color: #28a745;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="box">Column 1</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="box">Column 2</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="box">Column 3</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="box">Column 4</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+5.
+
+EX-5.1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Four-Column Layout</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .box {
+      background-color: #28a745;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="box">Column 1</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="box">Column 2</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="box">Column 3</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="box">Column 4</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+EX-5.2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reorder Columns</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .box {
+      background-color: #17a2b8;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 order-md-2 box">
+        Column A (appears second on md+ screens)
+      </div>
+      <div class="col-md-6 order-md-1 box bg-secondary">
+        Column B (appears first on md+ screens)
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+6.
+
+EX-6.1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .nav-link {
+      padding: 10px 20px;
+      color: white;
+      background-color: #343a40;
+      border: 1px solid #495057;
+      text-align: center;
+    }
+    .nav-link:hover {
+      background-color: #495057;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="container mt-5">
+    <div class="d-flex flex-column flex-md-row">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Services</a>
+      <a href="#" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+</body>
+</html>
+
+EX-6.2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card Layout</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="card p-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="mb-1">Card Title</h5>
+          <p class="mb-0 text-muted">Some subtitle or description here.</p>
+        </div>
+        <button class="btn btn-primary">Action</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+7.
+
+EX-7.1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Typography</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="display-1">Display 1 Heading</h1>
+    <p class="lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
+    <p>This is a <span class="fw-bold">bold</span> word inside a sentence.</p>
+    <p class="text-muted">This text is muted and less emphasized.</p>
+    <p><small class="text-body-secondary">This is small and secondary text.</small></p>
+    <p class="fst-italic">This paragraph is italic using Bootstrap’s <code>fst-italic</code>.</p>
+    <p class="text-decoration-underline">This text is underlined.</p>
+  </div>
+
+</body>
+</html>
+
+EX-7.2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text Case Utilities</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <p class="text-uppercase">this text becomes uppercase</p>
+    <p class="text-lowercase">THIS TEXT BECOMES LOWERCASE</p>
+    <p class="text-capitalize">this text becomes capitalized</p>
+  </div>
+
+</body>
+</html>
+
+8.
+EX-8.1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Registration Form</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <div class="input-group">
+          <span class="input-group-text">@</span>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Create a password">
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terms">
+        <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+EX-8.2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container mt-5" style="max-width: 400px;">
+    <h2 class="mb-4">Login</h2>
+    <form>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com">
+        <label for="loginEmail">Email address</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+        <label for="loginPassword">Password</label>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100">Login</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+9.
+
+EX-9.1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Buttons</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <h2>Contextual Buttons</h2>
+  
+  <button class="btn btn-primary">Primary</button>
+  <button class="btn btn-secondary">Secondary</button>
+  <button class="btn btn-success">Success</button>
+  <button class="btn btn-danger">Danger</button>
+  <button class="btn btn-warning">Warning</button>
+  <button class="btn btn-info">Info</button>
+  <button class="btn btn-light">Light</button>
+  <button class="btn btn-dark">Dark</button>
+  <button class="btn btn-link">Link</button>
+
+  <h2 class="mt-4">Outline Buttons</h2>
+
+  <button class="btn btn-outline-primary">Primary</button>
+  <button class="btn btn-outline-secondary">Secondary</button>
+  <button class="btn btn-outline-success">Success</button>
+  <button class="btn btn-outline-danger">Danger</button>
+  <button class="btn btn-outline-warning">Warning</button>
+  <button class="btn btn-outline-info">Info</button>
+  <button class="btn btn-outline-light">Light</button>
+  <button class="btn btn-outline-dark">Dark</button>
+</body>
+</html>
+
+EX-9.2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Groups and Toggles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+
+  <h2>Button Group</h2>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary">Left</button>
+    <button type="button" class="btn btn-primary">Middle</button>
+    <button type="button" class="btn btn-primary">Right</button>
+  </div>
+
+  <h2 class="mt-4">Toggle Buttons with Checkboxes</h2>
+  <div class="btn-group" role="group" aria-label="Checkbox toggle button group">
+    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck1">Option 1</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck2">Option 2</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck3">Option 3</label>
+  </div>
+
+</body>
+</html>
+
+10.
+
+EX-10.1
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <a class="navbar-brand" href="#">Logo</a>
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-light">Search</button>
+    </form>
+  </div>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+EX-10.2
+
+<!-- Nav Tabs -->
+<ul class="nav nav-tabs">
+  <li class="nav-item"><a class="nav-link active" href="#">Tab 1</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Tab 2</a></li>
+</ul>
+
+<!-- Nav Pills -->
+<ul class="nav nav-pills mt-3">
+  <li class="nav-item"><a class="nav-link active" href="#">Pill 1</a></li>
+  <li class="nav-item"><a class="nav-link" href="#">Pill 2</a></li>
+</ul>
+
+11.
+
+EX-11.1
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="card" style="width: 18rem;">
+  <img src="https://via.placeholder.com/150" class="card-img-top" alt="Profile">
+  <div class="card-body">
+    <h5 class="card-title">John Doe</h5>
+    <p class="card-text">Web Developer at XYZ Company</p>
+    <a href="#" class="btn btn-primary">View Profile</a>
+  </div>
+</div>
+
+EX-11.2
+
+<div class="d-flex align-items-start">
+  <img src="https://via.placeholder.com/80" class="me-3 rounded" alt="Avatar">
+  <div>
+    <h5>Jane Smith</h5>
+    <p>This is a sample media object. The image is aligned to the left, and this is the text content.</p>
+  </div>
+</div>
+
+12.
+
+EX-12.1
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="bg-light m-3 p-2">
+  <h4 class="mt-4">Section Title</h4>
+  <p class="py-5">This section uses margin (m-3, mt-4) and padding (p-2, py-5).</p>
+</div>
+
+
+EX-12.2
+
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h2>Our Pricing</h2>
+    <p class="text-muted">Choose a plan that suits you best</p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="border p-4 text-center">
+        <h5>Basic</h5>
+        <p class="display-6">$9</p>
+        <p>1 user, 10GB storage</p>
+        <button class="btn btn-outline-primary mt-3">Select</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="border p-4 text-center">
+        <h5>Pro</h5>
+        <p class="display-6">$29</p>
+        <p>5 users, 100GB storage</p>
+        <button class="btn btn-primary mt-3">Select</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="border p-4 text-center">
+        <h5>Enterprise</h5>
+        <p class="display-6">$99</p>
+        <p>Unlimited users & storage</p>
+        <button class="btn btn-outline-primary mt-3">Select</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+13.
+
+EX-13.1
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container my-4">
+  <div class="row text-white text-center">
+    <div class="col-md-3 p-4 bg-primary">Dashboard</div>
+    <div class="col-md-3 p-4 bg-success">Sales</div>
+    <div class="col-md-3 p-4 bg-warning text-dark">Users</div>
+    <div class="col-md-3 p-4 bg-danger">Alerts</div>
+  </div>
+</div>
+
+EX-13.2
+
+<div class="p-5 bg-dark bg-gradient text-white text-center">
+  <h2>Welcome to Admin Panel</h2>
+  <p>Manage all your data from a single place.</p>
+</div>
+
+14.
+
+EX-14.1
+
+<div class="d-none">
+  Hidden on all screen sizes
+</div>
+
+<!-- This section is visible on medium (≥768px) and larger screens -->
+<div class="d-none d-md-block">
+  Visible on md (≥768px) and above
+</div>
+
+<!-- This section is visible as flex only on large (≥992px) and above -->
+<div class="d-none d-lg-flex">
+  Visible as flex on lg (≥992px) and above
+</div>
+
+EX-14.2
+
+<div class="d-none d-md-block bg-light p-3" style="width: 200px; height: 100vh;">
+  <h4>Sidebar</h4>
+  <ul class="list-unstyled">
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+  </ul>
+</div>
+
+15.
+
+EX-15.1
+
+<img src="https://via.placeholder.com/150" 
+     class="border border-primary border-3 rounded-circle" 
+     alt="Bordered Rounded Image">
+
+EX-15.2
+
+<div class="card shadow shadow-lg rounded-pill p-3" style="width: 18rem;">
+  <div class="card-body text-center">
+    <h5 class="card-title">Card Title</h5>
+    <p class="card-text">Card with shadow and pill-rounded edges.</p>
+  </div>
+</div>
+
+16.
+
+EX-16.1
+
+<footer class="position-fixed bottom-0 w-100 bg-dark text-white text-center p-3">
+  Fixed Footer Content
+</footer>
+
+EX-16.2
+
+<div class="position-relative d-inline-block">
+  <img src="https://via.placeholder.com/200" alt="Image" class="img-fluid" />
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    New
+  </span>
+</div>
+
+17.
+
+EX-17.1
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<footer class="bg-light text-center p-3">
+  <a href="#" class="text-dark me-3"><i class="bi bi-facebook fs-4"></i></a>
+  <a href="#" class="text-dark me-3"><i class="bi bi-twitter fs-4"></i></a>
+  <a href="#" class="text-dark"><i class="bi bi-instagram fs-4"></i></a>
+</footer>
+
+EX-17.2
+
+<button type="button" class="btn btn-primary me-2" aria-label="Search">
+  <i class="bi bi-search"></i>
+</button>
+
+<button type="button" class="btn btn-success" aria-label="Save">
+  <i class="bi bi-save"></i>
+</button>
+
+18.
+
+EX-18.1
+
+<button data-bs-toggle="modal" data-bs-target="#modal" class="btn btn-primary">Open Modal</button>
+
+<div class="modal fade" id="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <button class="btn-close" data-bs-dismiss="modal"></button>
+      <p>Modal content here.</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+EX-18.2
+
+<div class="accordion" id="acc">
+  <div>
+    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#c1">Item 1</button>
+    <div id="c1" class="accordion-collapse collapse show">Content 1</div>
+  </div>
+  <div>
+    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#c2">Item 2</button>
+    <div id="c2" class="accordion-collapse collapse">Content 2</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+19.
+
+EX-19.1
+
+npm init -y
+npm install bootstrap sass
+@import "node_modules/bootstrap/scss/bootstrap";
+npx sass custom.scss custom.css
+
+EX-19.2
+
+$primary: #ff5733;
+$border-radius: 1.5rem;
+@import "variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+npx sass custom.scss custom.css
