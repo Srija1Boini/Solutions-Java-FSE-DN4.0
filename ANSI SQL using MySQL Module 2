@@ -1,0 +1,207 @@
+1.
+
+SELECT u.user_id, u.full_name, e.event_id, e.title, e.city, e.start_date
+FROM Users u
+JOIN Registrations r ON u.user_id = r.user_id
+JOIN Events e ON r.event_id = e.event_id
+WHERE e.status = 'upcoming' 
+  AND u.city = e.city
+ORDER BY u.user_id, e.start_date;
+
+2.
+
+SELECT e.event_id, e.title, AVG(f.rating) AS avg_rating, COUNT(f.feedback_id) AS feedback_count
+FROM Events e
+JOIN Feedback f ON e.event_id = f.event_id
+GROUP BY e.event_id, e.title
+HAVING COUNT(f.feedback_id) >= 10
+ORDER BY avg_rating DESC;
+
+3.
+SELECT u.user_id, u.full_name, u.email
+FROM Users u
+LEFT JOIN Registrations r ON u.user_id = r.user_id
+   AND r.registration_date >= CURRENT_DATE - INTERVAL '90 days'
+WHERE r.registration_id IS NULL;
+
+4.
+
+SELECT s.event_id, e.title, COUNT(s.session_id) AS session_count
+FROM Sessions s
+JOIN Events e ON s.event_id = e.event_id
+WHERE EXTRACT(HOUR FROM s.start_time) >= 10
+  AND EXTRACT(HOUR FROM s.start_time) < 12
+GROUP BY s.event_id, e.title;
+
+5.
+SELECT u.city, COUNT(DISTINCT r.user_id) AS distinct_user_registrations
+FROM Registrations r
+JOIN Users u ON r.user_id = u.user_id
+GROUP BY u.city
+ORDER BY distinct_user_registrations DESC
+LIMIT 5;
+
+6.
+
+SELECT e.event_id, e.title, r.resource_type, COUNT(r.resource_id) AS resource_count
+FROM Events e
+LEFT JOIN Resources r ON e.event_id = r.event_id
+GROUP BY e.event_id, e.title, r.resource_type
+ORDER BY e.event_id, r.resource_type;
+
+7.
+SELECT u.full_name, f.rating, f.comments, e.title AS event_title
+FROM Feedback f
+JOIN Users u ON f.user_id = u.user_id
+JOIN Events e ON f.event_id = e.event_id
+WHERE f.rating < 3;
+
+8.SELECT e.event_id, e.title, COUNT(s.session_id) AS session_count
+FROM Events e
+LEFT JOIN Sessions s ON e.event_id = s.event_id
+WHERE e.status = 'upcoming'
+GROUP BY e.event_id, e.title
+ORDER BY e.start_date;
+
+9.
+SELECT 
+    o.organizer_id,
+    o.organizer_name,
+    COUNT(e.event_id) AS total_events,
+    SUM(CASE WHEN e.event_status = 'upcoming' THEN 1 ELSE 0 END) AS upcoming_events,
+    SUM(CASE WHEN e.event_status = 'completed' THEN 1 ELSE 0 END) AS completed_events,
+    SUM(CASE WHEN e.event_status = 'cancelled' THEN 1 ELSE 0 END) AS cancelled_events
+FROM organizers o
+LEFT JOIN events e ON o.organizer_id = e.organizer_id
+GROUP BY o.organizer_id, o.organizer_name;
+
+10.
+
+SELECT e.event_id, e.event_name
+FROM events e
+JOIN registrations r ON e.event_id = r.event_id
+LEFT JOIN feedback f ON e.event_id = f.event_id
+WHERE f.feedback_id IS NULL
+GROUP BY e.event_id, e.event_name;
+
+11.
+SELECT 
+    DATE(u.registration_date) AS registration_day,
+    COUNT(u.user_id) AS new_users
+FROM users u
+WHERE u.registration_date >= CURRENT_DATE - INTERVAL '7' DAY
+GROUP BY DATE(u.registration_date)
+ORDER BY registration_day;
+
+12.
+
+WITH session_counts AS (
+    SELECT event_id, COUNT(session_id) AS total_sessions
+    FROM sessions
+    GROUP BY event_id
+)
+SELECT e.event_id, e.event_name, sc.total_sessions
+FROM events e
+JOIN session_counts sc ON e.event_id = sc.event_id
+WHERE sc.total_sessions = (
+    SELECT MAX(total_sessions) FROM session_counts
+);
+
+13.
+SELECT 
+    e.city,
+    AVG(f.rating) AS average_rating
+FROM events e
+JOIN feedback f ON e.event_id = f.event_id
+GROUP BY e.city;
+
+14.
+SELECT e.event_id, e.event_name, COUNT(r.user_id) AS total_registrations
+FROM events e
+JOIN registrations r ON e.event_id = r.event_id
+GROUP BY e.event_id, e.event_name
+ORDER BY total_registrations DESC
+LIMIT 3;
+
+15.
+SELECT s1.event_id, s1.session_id AS session1, s2.session_id AS session2
+FROM sessions s1
+JOIN sessions s2 ON s1.event_id = s2.event_id AND s1.session_id <> s2.session_id
+WHERE s1.start_time < s2.end_time AND s2.start_time < s1.end_time;
+
+16.SELECT u.user_id, u.user_name, u.created_at
+FROM users u
+LEFT JOIN registrations r ON u.user_id = r.user_id
+WHERE u.created_at >= CURRENT_DATE - INTERVAL '30 days'
+  AND r.user_id IS NULL;
+
+17.
+SELECT s.speaker_id, sp.speaker_name, COUNT(s.session_id) AS session_count
+FROM sessions s
+JOIN speakers sp ON s.speaker_id = sp.speaker_id
+GROUP BY s.speaker_id, sp.speaker_name
+HAVING COUNT(s.session_id) > 1;
+
+
+18.
+SELECT e.event_id, e.event_name
+FROM events e
+LEFT JOIN resources r ON e.event_id = r.event_id
+WHERE r.resource_id IS NULL;
+
+
+19.
+SELECT e.event_id, e.event_name,
+       COUNT(DISTINCT r.user_id) AS total_registrations,
+       AVG(f.rating) AS avg_feedback_rating
+FROM events e
+LEFT JOIN registrations r ON e.event_id = r.event_id
+LEFT JOIN feedbacks f ON e.event_id = f.event_id
+WHERE e.status = 'completed'
+GROUP BY e.event_id, e.event_name;
+
+
+20.
+SELECT u.user_id, u.user_name,
+       COUNT(DISTINCT r.event_id) AS events_attended,
+       COUNT(f.feedback_id) AS feedbacks_submitted
+FROM users u
+LEFT JOIN registrations r ON u.user_id = r.user_id
+LEFT JOIN feedbacks f ON u.user_id = f.user_id
+GROUP BY u.user_id, u.user_name;
+
+
+21.
+SELECT u.user_id, u.user_name, COUNT(f.feedback_id) AS feedback_count
+FROM users u
+JOIN feedbacks f ON u.user_id = f.user_id
+GROUP BY u.user_id, u.user_name
+ORDER BY feedback_count DESC
+LIMIT 5;
+
+
+22.
+SELECT user_id, event_id, COUNT(*) AS registration_count
+FROM registrations
+GROUP BY user_id, event_id
+HAVING COUNT(*) > 1;
+
+
+23.
+SELECT DATE_FORMAT(registration_date, '%Y-%m') AS month, COUNT(*) AS registration_count
+FROM registrations
+WHERE registration_date >= DATE_SUB(CURDATE(), INTERVAL 12 MONTH)
+GROUP BY month
+ORDER BY month;
+
+24.
+SELECT event_id, AVG(TIMESTAMPDIFF(MINUTE, session_start_time, session_end_time)) AS avg_duration_minutes
+FROM sessions
+GROUP BY event_id;
+
+
+25.
+SELECT e.event_id, e.event_name
+FROM events e
+LEFT JOIN sessions s ON e.event_id = s.event_id
+WHERE s.session_id IS NULL;
